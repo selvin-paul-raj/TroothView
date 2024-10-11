@@ -1,3 +1,236 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* From Uiverse.io by vinodjangid07 */ 
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(120, 47, 255, 0.76) 0%, rgb(185, 132, 255) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(184, 146, 255, 0.301);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+  }
+  
+  .cssbuttons-io-button svg {
+    margin-right: 8px;
+  }
+  
+  .cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(149, 91, 255,0.6);
+  }
+  
+  .cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em rgba(160, 109, 255,0.3);
+  }
+  
+  /* From Uiverse.io by fanishah */ 
+  .loader {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
+.loader_body,
+.loader_front,
+.loader_handlebars,
+.loader_pedals,
+.loader_pedals-spin,
+.loader_seat,
+.loader_spokes,
+.loader_spokes-spin,
+.loader_tire {
+    animation: bikeBody 3s ease-in-out infinite;
+    stroke: white; /* Changed to white */
+    transition: stroke var(--trans-dur);
+}
+
+.loader_front {
+    animation-name: bikeFront;
+}
+
+.loader_handlebars {
+    animation-name: bikeHandlebars;
+}
+
+.loader_pedals {
+    animation-name: bikePedals;
+}
+
+.loader_pedals-spin {
+    animation-name: bikePedalsSpin;
+}
+
+.loader_seat {
+    animation-name: bikeSeat;
+}
+
+.loader_spokes,
+.loader_tire {
+    stroke: white; /* Changed to white */
+}
+
+.loader_spokes {
+    animation-name: bikeSpokes;
+}
+
+.loader_spokes-spin {
+    animation-name: bikeSpokesSpin;
+}
+
+.loader_tire {
+    animation-name: bikeTire;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: hsl(var(--hue), 90%, 10%);
+        --fg: hsl(var(--hue), 90%, 90%);
+    }
+}
+
+/* Animations */
+@keyframes bikeBody {
+    from {
+        stroke-dashoffset: 79;
+    }
+
+    33%,
+    67% {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -79;
+    }
+}
+
+@keyframes bikeFront {
+    from {
+        stroke-dashoffset: 19;
+    }
+
+    33%,
+    67% {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -19;
+    }
+}
+
+@keyframes bikeHandlebars {
+    from {
+        stroke-dashoffset: 10;
+    }
+
+    33%,
+    67% {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -10;
+    }
+}
+
+@keyframes bikePedals {
+    from {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -25.133;
+    }
+
+    33%,
+    67% {
+        animation-timing-function: ease-out;
+        stroke-dashoffset: -21.991;
+    }
+
+    to {
+        stroke-dashoffset: -25.133;
+    }
+}
+
+@keyframes bikePedalsSpin {
+    from {
+        transform: rotate(0.1875turn);
+    }
+
+    to {
+        transform: rotate(3.1875turn);
+    }
+}
+
+@keyframes bikeSeat {
+    from {
+        stroke-dashoffset: 5;
+    }
+
+    33%,
+    67% {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -5;
+    }
+}
+
+@keyframes bikeSpokes {
+    from {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -31.416;
+    }
+
+    33%,
+    67% {
+        animation-timing-function: ease-out;
+        stroke-dashoffset: -23.562;
+    }
+
+    to {
+        stroke-dashoffset: -31.416;
+    }
+}
+
+@keyframes bikeSpokesSpin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(3turn);
+    }
+}
+
+@keyframes bikeTire {
+    from {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: 56.549;
+        transform: rotate(0);
+    }
+
+    33% {
+        stroke-dashoffset: 0;
+        transform: rotate(0.33turn);
+    }
+
+    67% {
+        animation-timing-function: ease-out;
+        stroke-dashoffset: 0;
+        transform: rotate(0.67turn);
+    }
+
+    to {
+        stroke-dashoffset: -56.549;
+        transform: rotate(1turn);
+    }
+}
