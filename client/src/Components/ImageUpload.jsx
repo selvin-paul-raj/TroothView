@@ -112,7 +112,7 @@ const ImageUpload = () => {
   };
 
   return (
-    <div className="h-full flex flex-col items-center justify-center bg-gray-900 p-4">
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-900 p-4">
       <div className="flex flex-col md:flex-row w-full max-w-6xl md:h-[30rem] h-screen mt-24 shadow-lg rounded-lg md:border md:border-gray-700">
         <motion.div
           className="w-full md:w-1/2 flex flex-col items-center justify-center p-10 md:border-r-2 relative overflow-hidden border-gray-700"
